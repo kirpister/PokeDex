@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Pokedex</title>
+</head>
+<body>
+
+    <h1>P<img src="pokeball.png">KEDEX</h1>
+
+    <div class="btn-container">
+        <button value="1" onclick='getGen(this.value)'>Gen 1</button>
+        <button value="2" onclick='getGen(this.value)'>Gen 2</button>
+        <button value="3" onclick='getGen(this.value)'>Gen 3</button>
+        <button value="4" onclick='getGen(this.value)'>Gen 4</button>
+        <button value="5" onclick='getGen(this.value)'>Gen 5</button>
+        <button value="6" onclick='getGen(this.value)'>Gen 6</button>
+        <button value="7" onclick='getGen(this.value)'>Gen 7</button>
+        <button value="8" onclick='getGen(this.value)'>Gen 8</button>
+    </div>
+
+    <div class="search-box"><input id="search" type="text" placeholder="Search for Pokemon"></div>
+
+    <div class="getPokes" id="genText">Choose a generation of Pokemons</div>
+
+    <div class="container">
+
+        <div class="poke-card"></div>
+
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root {
+    --h1-font: 'Russo One', sans-serif;
+    --main-font: 'Dosis', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+html {
+    background: url('lightning.jpg');
+    background-color: rgb(245, 125, 243);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: var(--h1-font);
+    font-size: 2.4rem;
+    color:rgb(248, 228, 228);
+    text-align: center;
+    padding: 3rem;
+    letter-spacing: 5px;
+} 
+
+h1 img {
+    margin-right: 4px;
+    animation: rotate 4s infinite linear;
+}
+
+h3 {
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 0.5rem;
+}
+
+p {
+    font-family: var(--main-font);
+    color: white;
+}
+
+/* SEARCH POKEMONS */
+
+button {
+    background: rgb(35,123,251);
+    background: linear-gradient(45deg, rgba(35,123,251,1) 0%, rgba(201,48,251,1) 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    font-family: var(--main-font);
+    margin: 10px;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    background: transparent;
+    border: none;
+}
+
+::placeholder {
+    color:white;
+    font-family: var(--main-font);
+    letter-spacing: 1px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+.getPokes {
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* CARDS */ 
+
+.container {
+    display: grid;
+    width: 70vw;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    margin: 0 auto;
+}
+
+.poke-card {
+    width: 170px;
+    height: 235px;
+    border: 2px solid rgba(255, 255, 255, 0.503);
+    border-radius: 15px;
+    /* background: rgb(235,236,241);
+    background: radial-gradient(circle, rgba(235, 236, 241, 0.675) 31%, rgba(247, 1, 1, 0.533) 100%); */
+    background: rgb(35,123,251);
+    background: linear-gradient(45deg, rgba(35,123,251,1) 0%, rgba(201,48,251,1) 100%);
+    text-align: center;
+}
+
+.icon {
+    width: 1.2rem;
+    height: auto;
+    margin: 3px;
+}
+
+.poke-img {
+    width: 150px;
+    height: auto;
+    padding: 15px;
+    /* -webkit-filter: grayscale(80%);
+    filter: grayscale(80%); */
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.poke-img:hover {
+    transform: scale(1.2);
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    } 
+  }
+
+ /* MOBILE */
+
+  @media only screen and (max-width: 500px) {
+   
+    .container {
+        display: grid;
+        width: 90vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1.3rem;
+    }
+}
+
