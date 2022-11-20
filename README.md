@@ -2,6 +2,8 @@
 
 Pokedex was created as the final challenge in our JavaScript course at BCH Full Stack Developer program. The aim was to learn how to use APIs and create elements with JavaScript. 
 
+Have a look [here](https://magenta-sprinkles-f3b143.netlify.app/).
+
 ### Technologies Used 
 
 - Vanilla JS
